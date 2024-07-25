@@ -33,7 +33,20 @@ class CalculadoraTest {
         assertEquals("Resultado: 2.0", result)
     }
 
-    
+    @Test
+    fun testPotencia() {
+        val tokens = arrayListOf("2", "^", "3")
+        val result = captureOutput { calculadora(tokens) }
+        assertEquals("Resultado: 8.0", result)
+    }
+
+    @Test
+    fun testRaiz() {
+        val tokens = arrayListOf("r", "9")
+        val result = captureOutput { calculadora(tokens) }
+        assertEquals("Resultado: 3.0", result)
+    }
+
 
 
 
