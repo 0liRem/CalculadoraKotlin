@@ -12,9 +12,12 @@ class CalculadoraTest {
         assertEquals("Resultado: 5.0", result)
     }
 
-
-
-
+    @Test
+    fun testResta() {
+        val tokens = arrayListOf("5", "-", "3")
+        val result = captureOutput { calculadora(tokens) }
+        assertEquals("Resultado: 2.0", result)
+    }
 
 
     // Helper function to capture console output
@@ -29,3 +32,5 @@ class CalculadoraTest {
         }
         return stream.toString().trim()
     }
+
+}
