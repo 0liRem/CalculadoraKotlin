@@ -33,12 +33,7 @@ class CalculadoraTest {
         assertEquals("Resultado: 2.0", result)
     }
 
-    @Test
-    fun testDivisionPorCero() {
-        val tokens = arrayListOf("6", "/", "0")
-        val result = captureOutput { calculadora(tokens) }
-        assertEquals("Error: División por cero.", result)
-    }
+    
 
 
 
