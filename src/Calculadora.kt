@@ -7,8 +7,11 @@ fun calculadora(tokens: ArrayList<String>) {
         "+" to 1, "-" to 1, "*" to 2, "/" to 2, "^" to 3, "r" to 3, "e" to 3
     )
 
+    // Eliminar espacios y filtrar tokens vacíos
+    val cleanedTokens = tokens.map { it.trim() }.filter { it.isNotEmpty() }
+
     fun toPostfix() {
-        for (token in tokens) {
+        for (token in cleanedTokens) {
             when {
                 token.toDoubleOrNull() != null -> postfix.add(token)
                 token == "(" -> opStack.add(token)
