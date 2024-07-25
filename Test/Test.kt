@@ -47,8 +47,12 @@ class CalculadoraTest {
         assertEquals("Resultado: 3.0", result)
     }
 
-
-
+    @Test
+    fun testExponencial() {
+        val tokens = arrayListOf("e", "1")
+        val result = captureOutput { calculadora(tokens) }
+        assertEquals("Resultado: 2.718281828459045", result)
+    }
 
     // Helper function to capture console output
     private fun captureOutput(block: () -> Unit): String {
