@@ -72,7 +72,7 @@ fun calculadora(tokens: ArrayList<String>) {
             }
         }
         if (stack.size != 1) {
-            println("Error: La expresión no está correctamente balanceada.")
+            println("Error: La expresion no está correctamente balanceada.")
         } else {
             println("Resultado: ${stack.last()}")
         }
