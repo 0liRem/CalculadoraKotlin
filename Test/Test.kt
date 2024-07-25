@@ -19,6 +19,21 @@ class CalculadoraTest {
         assertEquals("Resultado: 2.0", result)
     }
 
+    @Test
+    fun testMultiplicacion() {
+        val tokens = arrayListOf("2", "*", "3")
+        val result = captureOutput { calculadora(tokens) }
+        assertEquals("Resultado: 6.0", result)
+    }
+
+    @Test
+    fun testDivision() {
+        val tokens = arrayListOf("6", "/", "3")
+        val result = captureOutput { calculadora(tokens) }
+        assertEquals("Resultado: 2.0", result)
+    }
+
+
 
     // Helper function to capture console output
     private fun captureOutput(block: () -> Unit): String {
